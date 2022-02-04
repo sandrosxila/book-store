@@ -1,0 +1,9 @@
+.header-navigation{
+    display: flex;
+    & > ul{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        user-select: none;
+    }
+}

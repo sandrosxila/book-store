@@ -1,0 +1,11 @@
+.slide-label{
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $gainsboro-grey;
+}
+
+.active {
+    background-color: $gainsboro-grey;
+}

@@ -1,0 +1,10 @@
+.header-link{
+    font-family: Hind, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
