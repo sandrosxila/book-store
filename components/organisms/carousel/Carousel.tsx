@@ -1,4 +1,4 @@
-import SlideLabel from '@/components/atoms/slide-label/SlideLabel';
+import SlideLabelGroup from '@/components/molecules/slide-label-group/SlideLabelGroup';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './carousel.module.scss';
 
@@ -25,28 +25,24 @@ const Carousel: React.FC = ({ children }) => {
         transform: `translateX(${carouselPosition * -100}%)`
     };
 
-    const onSlideLabelClick = (idx: number) => () => {
-        setCarouselPosition(idx);
-    };
-
     return (
         <div className={ styles.carousel }>
-            <div className={ styles['carousel-items'] } style={ carouselStyles }>
+            <div className={ styles['carousel-items'] } style={ carouselStyles } role={ 'listbox' }>
                 {
                     carouselItems.map((child, idx) => (
-                        <div className={ styles['carousel-item'] } key={ idx }>
+                        <div 
+                            key={ idx }
+                            className={ styles['carousel-item'] } 
+                            role={ 'option' } 
+                            aria-label={ `carousel item ${idx + 1}` } 
+                            aria-selected={ idx === carouselPosition }
+                        >
                             { child }
                         </div>
                     ))
                 }
             </div>
-            <div className={ styles['carousel-slide-label-group'] }>
-                {
-                    Array.from({ length: carouselItems.length }).map((_, idx) => (
-                        <SlideLabel onClick={ onSlideLabelClick(idx) } active={ idx === carouselPosition } key={ idx }/>
-                    ))
-                }
-            </div>
+            <SlideLabelGroup positionSetter={ setCarouselPosition } numberOfSlideLabels={ carouselItems.length } activePosition={ carouselPosition }/>
         </div>
     );
 };

@@ -1,7 +1,10 @@
-import Carousel from '@/components/molecules/carousel/Carousel';
-import { Header } from '@/components/organisms/Header';
+import Carousel from '@/components/organisms/carousel/Carousel';
+import { Header } from '@/components/organisms/header/Header';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import LibraryImage from '../public/assets/images/library.jpg';
+import OldPrinterImage from '../public/assets/images/old-printer.jpg';
+import NightCityImage from '../public/assets/images/night-city.jpg';
 
 const Home: NextPage = () => {
     return (
@@ -9,23 +12,26 @@ const Home: NextPage = () => {
             <Header/>
             <Carousel>
                 <Image 
-                    src={ '/assets/images/library.jpg' } 
+                    src={ LibraryImage } 
                     alt="library image"
                     layout={ 'fill' }
                     objectFit={ 'cover' }
                     objectPosition={ 'bottom' }
+                    priority
                 />
                 <Image 
-                    src={ '/assets/images/old-printer.jpg' } 
+                    src={ OldPrinterImage } 
                     alt="printer image"
                     layout={ 'fill' }
                     objectFit={ 'cover' }
+                    priority
                 />
                 <Image 
-                    src={ '/assets/images/night-city.jpg' } 
+                    src={ NightCityImage } 
                     alt="night city image"
                     layout={ 'fill' }
                     objectFit={ 'cover' }
+                    priority
                 />
             </Carousel>
         </div>

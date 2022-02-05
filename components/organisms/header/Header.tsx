@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderNavigation from '../molecules/header/HeaderNavigation';
-import Logo from '../molecules/header/Logo';
+import HeaderNavigation from '../../molecules/header-navigation/HeaderNavigation';
+import Logo from '../../molecules/logo/Logo';
 import styles from './header.module.scss';
 
 export const Header = () => {
