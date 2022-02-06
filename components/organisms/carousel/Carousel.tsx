@@ -27,13 +27,13 @@ const Carousel: React.FC = ({ children }) => {
 
     return (
         <div className={ styles.carousel }>
-            <div className={ styles['carousel-items'] } style={ carouselStyles } role={ 'listbox' }>
+            <div className={ styles['carousel-items'] } style={ carouselStyles } role={ 'tablist' }>
                 {
                     carouselItems.map((child, idx) => (
                         <div 
                             key={ idx }
                             className={ styles['carousel-item'] } 
-                            role={ 'option' } 
+                            role={ 'tab' } 
                             aria-label={ `carousel item ${idx + 1}` } 
                             aria-selected={ idx === carouselPosition }
                         >

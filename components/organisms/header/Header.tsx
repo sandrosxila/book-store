@@ -3,7 +3,7 @@ import HeaderNavigation from '../../molecules/header-navigation/HeaderNavigation
 import Logo from '../../molecules/logo/Logo';
 import styles from './header.module.scss';
 
-export const Header = () => {
+const Header = () => {
     return (
         <header className={ styles.header }>
             <Logo/>
@@ -11,3 +11,5 @@ export const Header = () => {
         </header>
     );
 };
+
+export default Header;

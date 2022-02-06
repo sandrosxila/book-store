@@ -1,0 +1,23 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-header {
+  display: flex;
+  align-self: center;
+  color: $secondary;
+  text-transform: uppercase;
+  font-size: 1.65rem;
+  font-weight: 700;
+  font-family: "Poppins", "Hind", sans-serif;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,71 @@
+.genre-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 16fr 1fr 1fr 16fr;
+  width: 60rem;
+  height: 30rem;
+  gap: 1rem;
+}
+
+.genre-image-box {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.genre-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+
+.genre-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: $gainsboro-white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 5px black;
+  z-index: 1;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.genre-tile-0 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+  background: crimson;
+}
+
+.genre-tile-1 {
+  position: relative;
+  grid-column: span 1 / -1;
+  grid-row: 1 / span 1;
+  background: orange;
+}
+
+.genre-tile-2 {
+  position: relative;
+  grid-column: 1 / span 1;
+  grid-row: span 1 / -1;
+  background: gray;
+}
+
+.genre-tile-3 {
+  position: relative;
+  grid-column: span 1 / -1;
+  grid-row: span 3 / -1;
+  background: purple;
+}

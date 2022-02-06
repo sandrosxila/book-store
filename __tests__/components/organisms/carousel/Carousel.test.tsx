@@ -13,7 +13,7 @@ describe('Carousel', () => {
         );
 
         const slide1 = screen.getByLabelText('carousel item 1');
-        const slide2 = screen.getByRole('option', { name: 'carousel item 2' });
+        const slide2 = screen.getByRole('tab', { name: 'carousel item 2' });
 
         expect(slide1).toHaveAttribute('aria-selected', 'true');
         expect(slide2).toHaveAttribute('aria-selected', 'false');
